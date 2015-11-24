@@ -261,11 +261,13 @@ public class Videoclub implements Serializable {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         // TODO code application logic here
         
-        carregarBD(usuarios, peliculas, series);
+        //carregarBD(usuarios, peliculas, series);
         
         Login login = new Login();
         
         login.setVisible(true);
+        
+        //desarBD(usuarios, peliculas, series);
         
 //        Pelicula peli;
 //        Serie serie;
