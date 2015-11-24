@@ -74,6 +74,7 @@ public class Login extends javax.swing.JFrame {
         jTextPane1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane1.setText("Usuario");
+        jTextPane1.setFocusable(false);
         jScrollPane1.setViewportView(jTextPane1);
 
         jTextPane2.setEditable(false);
@@ -81,6 +82,8 @@ public class Login extends javax.swing.JFrame {
         jTextPane2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane2.setText("Password");
+        jTextPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTextPane2.setFocusable(false);
         jScrollPane2.setViewportView(jTextPane2);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
