@@ -68,6 +68,11 @@ public class Login extends javax.swing.JFrame {
         BotoRegistrar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoRegistrar.setForeground(new java.awt.Color(204, 204, 0));
         BotoRegistrar.setText("Registrarse");
+        BotoRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoRegistrarActionPerformed(evt);
+            }
+        });
 
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
@@ -160,6 +165,13 @@ public class Login extends javax.swing.JFrame {
     private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldActionPerformed
+
+    private void BotoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoRegistrarActionPerformed
+        // TODO add your handling code here:
+              Registrarse frame = new Registrarse();  
+              frame.show();
+              dispose();
+    }//GEN-LAST:event_BotoRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
