@@ -160,6 +160,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane3.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane3.setText("Nombre");
+        jTextPane3.setFocusable(false);
         jScrollPane3.setViewportView(jTextPane3);
 
         jTextPane6.setEditable(false);
@@ -167,6 +168,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane6.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane6.setText("Apellidos");
+        jTextPane6.setFocusable(false);
         jScrollPane6.setViewportView(jTextPane6);
 
         jTextPane8.setEditable(false);
@@ -174,6 +176,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane8.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane8.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane8.setText("Dirección");
+        jTextPane8.setFocusable(false);
         jScrollPane8.setViewportView(jTextPane8);
 
         jTextPane11.setEditable(false);
@@ -181,6 +184,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane11.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane11.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane11.setText("Ciudad");
+        jTextPane11.setFocusable(false);
         jScrollPane11.setViewportView(jTextPane11);
 
         jTextPane12.setEditable(false);
@@ -188,6 +192,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane12.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane12.setText("DNI");
+        jTextPane12.setFocusable(false);
         jScrollPane12.setViewportView(jTextPane12);
 
         ModificarNombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -203,6 +208,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane13.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane13.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane13.setText("Teléfono");
+        jTextPane13.setFocusable(false);
         jScrollPane13.setViewportView(jTextPane13);
 
         ModificarApellidos.setBackground(new java.awt.Color(255, 255, 255));
@@ -219,6 +225,7 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane14.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane14.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane14.setText("CP");
+        jTextPane14.setFocusable(false);
         jScrollPane14.setViewportView(jTextPane14);
 
         ModificarDni.setBackground(new java.awt.Color(255, 255, 255));
