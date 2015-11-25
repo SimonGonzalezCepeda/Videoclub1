@@ -16,6 +16,7 @@ public class Serie extends javax.swing.JFrame {
      */
     public Serie() {
         initComponents();
+        setLocationRelativeTo(null) ; 
     }
 
     /**
