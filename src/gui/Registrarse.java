@@ -57,6 +57,7 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        BotoTornarMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -106,6 +107,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane1.setText("Nombre");
+        jTextPane1.setFocusable(false);
         jScrollPane1.setViewportView(jTextPane1);
 
         jTextPane2.setEditable(false);
@@ -113,6 +115,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane2.setText("Apellidos");
+        jTextPane2.setFocusable(false);
         jScrollPane2.setViewportView(jTextPane2);
 
         jTextPane4.setEditable(false);
@@ -120,6 +123,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane4.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane4.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane4.setText("Dirección");
+        jTextPane4.setFocusable(false);
         jScrollPane4.setViewportView(jTextPane4);
 
         jTextPane5.setEditable(false);
@@ -127,6 +131,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane5.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane5.setText("Ciudad");
+        jTextPane5.setFocusable(false);
         jScrollPane5.setViewportView(jTextPane5);
 
         jTextPane6.setEditable(false);
@@ -134,6 +139,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane6.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane6.setText("Username");
+        jTextPane6.setFocusable(false);
         jScrollPane6.setViewportView(jTextPane6);
 
         jTextPane7.setEditable(false);
@@ -141,6 +147,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane7.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane7.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane7.setText("DNI");
+        jTextPane7.setFocusable(false);
         jScrollPane7.setViewportView(jTextPane7);
 
         jTextPane8.setEditable(false);
@@ -148,6 +155,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane8.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane8.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane8.setText("Password");
+        jTextPane8.setFocusable(false);
         jScrollPane8.setViewportView(jTextPane8);
 
         jTextFieldUsername.setBackground(new java.awt.Color(255, 255, 255));
@@ -163,6 +171,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane9.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane9.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane9.setText("Teléfono");
+        jTextPane9.setFocusable(false);
         jScrollPane9.setViewportView(jTextPane9);
 
         jTextPane10.setEditable(false);
@@ -170,6 +179,7 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane10.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane10.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane10.setText("CP");
+        jTextPane10.setFocusable(false);
         jScrollPane10.setViewportView(jTextPane10);
 
         jPasswordField.setBackground(new java.awt.Color(255, 255, 255));
@@ -193,6 +203,16 @@ public class Registrarse extends javax.swing.JFrame {
 
         jLabel3.setText("Datos de Registro");
 
+        BotoTornarMenu.setBackground(new java.awt.Color(204, 204, 0));
+        BotoTornarMenu.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        BotoTornarMenu.setForeground(new java.awt.Color(0, 0, 102));
+        BotoTornarMenu.setText("Volver");
+        BotoTornarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoTornarMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -210,18 +230,17 @@ public class Registrarse extends javax.swing.JFrame {
                                         .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(15, 15, 15)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(jTextFieldApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(81, 81, 81)
+                                    .addGap(84, 84, 84)
                                     .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -265,7 +284,9 @@ public class Registrarse extends javax.swing.JFrame {
                         .addGap(121, 121, 121))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotoRegistrar)
-                        .addGap(278, 278, 278))
+                        .addGap(203, 203, 203)
+                        .addComponent(BotoTornarMenu)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(284, 284, 284))))
@@ -283,13 +304,9 @@ public class Registrarse extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane2)
                             .addComponent(jTextFieldApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -327,7 +344,9 @@ public class Registrarse extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotoRegistrar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BotoRegistrar)
+                    .addComponent(BotoTornarMenu))
                 .addGap(8, 8, 8))
         );
 
@@ -342,6 +361,9 @@ public class Registrarse extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         videoclub.Usuari.Registrar();
+        Login frame = new Login();
+        frame.show();
+        dispose();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
 
     private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
@@ -364,6 +386,13 @@ public class Registrarse extends javax.swing.JFrame {
             Logger.getLogger(Registrarse.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_formWindowClosing
+
+    private void BotoTornarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarMenuActionPerformed
+        // TODO add your handling code here:
+        Login frame = new Login();
+        frame.show();
+        dispose();
+    }//GEN-LAST:event_BotoTornarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -402,6 +431,7 @@ public class Registrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotoRegistrar;
+    private javax.swing.JButton BotoTornarMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
