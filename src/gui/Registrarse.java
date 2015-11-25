@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package gui;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import videoclub.Videoclub;
 
 
@@ -31,10 +34,8 @@ public class Registrarse extends javax.swing.JFrame {
 
         jTextFieldNombre = new javax.swing.JTextField();
         jTextFieldApellidos = new javax.swing.JTextField();
-        jTextFieldTelefono = new javax.swing.JTextField();
         jTextFieldDireccion = new javax.swing.JTextField();
         jTextFieldDni = new javax.swing.JTextField();
-        jTextFieldCP = new javax.swing.JTextField();
         jTextFieldCiudad = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -50,12 +51,10 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane7 = new javax.swing.JTextPane();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextPane8 = new javax.swing.JTextPane();
-        jTextFieldUsername = new javax.swing.JTextField();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextPane9 = new javax.swing.JTextPane();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextPane10 = new javax.swing.JTextPane();
-        jPasswordField = new javax.swing.JPasswordField();
         BotoRegistrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -65,6 +64,11 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jTextFieldNombre.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNombre.setForeground(new java.awt.Color(0, 0, 0));
@@ -357,6 +361,15 @@ public class Registrarse extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCiudadActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Registrarse.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
     /**
      * @param args the command line arguments
      */
@@ -397,7 +410,7 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    public javax.swing.JPasswordField jPasswordField;
+    public static final javax.swing.JPasswordField jPasswordField = new javax.swing.JPasswordField();
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
@@ -410,14 +423,14 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    public javax.swing.JTextField jTextFieldApellidos;
-    public javax.swing.JTextField jTextFieldCP;
+    public static javax.swing.JTextField jTextFieldApellidos;
+    public static final javax.swing.JTextField jTextFieldCP = new javax.swing.JTextField();
     public javax.swing.JTextField jTextFieldCiudad;
     public javax.swing.JTextField jTextFieldDireccion;
-    public javax.swing.JTextField jTextFieldDni;
-    public javax.swing.JTextField jTextFieldNombre;
-    public javax.swing.JTextField jTextFieldTelefono;
-    public javax.swing.JTextField jTextFieldUsername;
+    public static javax.swing.JTextField jTextFieldDni;
+    public static javax.swing.JTextField jTextFieldNombre;
+    public static final javax.swing.JTextField jTextFieldTelefono = new javax.swing.JTextField();
+    public static final javax.swing.JTextField jTextFieldUsername = new javax.swing.JTextField();
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane10;
     private javax.swing.JTextPane jTextPane2;
