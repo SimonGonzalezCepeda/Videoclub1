@@ -18,7 +18,6 @@ public class Usuario extends javax.swing.JFrame {
      */
     public Usuario() {
         initComponents();
-        setLocationRelativeTo(null) ; 
     }
 
     /**

@@ -5,13 +5,9 @@
  */
 package gui;
 
-<<<<<<< HEAD
-import java.awt.event.KeyEvent;
-=======
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
->>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
 import videoclub.Videoclub;
 import videoclub.Usuari;
 import javax.swing.JOptionPane;
@@ -21,14 +17,12 @@ import javax.swing.JOptionPane;
  * @author sylver
  */
 public class Login extends javax.swing.JFrame {
-    
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
-        setLocationRelativeTo(null) ; 
     }
 
     /**
@@ -51,18 +45,12 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-<<<<<<< HEAD
-        addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                formKeyPressed(evt);
-=======
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
->>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
             }
         });
 
@@ -197,10 +185,6 @@ public class Login extends javax.swing.JFrame {
               dispose();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
 
-<<<<<<< HEAD
-    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-    }//GEN-LAST:event_formKeyPressed
-=======
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
@@ -213,7 +197,6 @@ public class Login extends javax.swing.JFrame {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_formWindowClosing
->>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
 
     /**
      * @param args the command line arguments

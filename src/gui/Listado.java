@@ -18,7 +18,6 @@ public class Listado extends javax.swing.JFrame {
      */
     public Listado() {
         initComponents();
-        setLocationRelativeTo(null) ; 
     }
 
     /**

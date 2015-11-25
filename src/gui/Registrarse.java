@@ -21,7 +21,6 @@ public class Registrarse extends javax.swing.JFrame {
      */
     public Registrarse() {
         initComponents();
-        setLocationRelativeTo(null) ; 
     }
 
     /**

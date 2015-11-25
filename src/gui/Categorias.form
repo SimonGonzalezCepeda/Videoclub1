@@ -141,9 +141,6 @@
           </StringArray>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CategoriesSerieActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="CategoriesPelis">
       <Properties>
@@ -157,9 +154,6 @@
           </StringArray>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CategoriesPelisActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotoFiltrarSeries">
       <Properties>
@@ -174,9 +168,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Filtrar"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotoFiltrarSeriesActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotoFiltrarPelis">
       <Properties>

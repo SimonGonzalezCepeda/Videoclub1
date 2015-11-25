@@ -16,9 +16,8 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
      */
     public CategoriaFiltrada() {
         initComponents();
-        setLocationRelativeTo(null) ; 
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,7 +38,6 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(51, 51, 55));
         jTextPane1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(204, 204, 0));
