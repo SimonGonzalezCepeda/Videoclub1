@@ -5,6 +5,9 @@
  */
 package gui;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import videoclub.Videoclub;
 import videoclub.Usuari;
 import javax.swing.JOptionPane;
@@ -42,6 +45,14 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         BotoLogin.setBackground(new java.awt.Color(0, 0, 102));
         BotoLogin.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -149,17 +160,18 @@ public class Login extends javax.swing.JFrame {
         //char password[]=txtPass.getPassword();
         String contraseña = new String();
         Usuari usuario;
-        int i;
+        int i, j=0;
         for (i = 0; i < Videoclub.usuarios.size(); i++) {
             usuario = Videoclub.usuarios.get(i);
             if (jUserField.getText().equals(usuario.getUserName()) && jPasswordField.getText().equals(usuario.getPassword())) {
                 this.dispose();
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Error:\n" + "Combinación de usuario y contraseña incorrecta.", "Error 001", WIDTH, null);
-            }
+                j = 1;
+            }          
         }
+        if(j!=1)
+            JOptionPane.showMessageDialog(null, "Error:\n" + "Combinación de usuario y contraseña incorrecta.", "Error 001", WIDTH, null);
     }//GEN-LAST:event_BotoLoginActionPerformed
 
     private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
@@ -172,6 +184,19 @@ public class Login extends javax.swing.JFrame {
               frame.show();
               dispose();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
