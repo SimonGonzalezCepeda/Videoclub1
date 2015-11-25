@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import gui.*;
 import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.JOptionPane;
-import videoclub.Videoclub;
+
 
 /**
  *
@@ -54,7 +54,7 @@ public class Usuari implements Serializable {
     static public void Registrar() {
         Registrarse regis = new Registrarse();
 
-        if (regis.jTextFieldUsername.getText().trim().length() == 0 || regis.jPasswordField.getText().trim().length() == 0) {
+        if (Registrarse.jTextFieldUsername.getText().trim().length() == 0 || Registrarse.jPasswordField.getText().trim().length() == 0) {
             JOptionPane.showMessageDialog(null, "Error:\n" + "Es obligatoria insertar al menos un usuario y una contraseña.", "Error 001", WIDTH, null);
         }
 
@@ -62,12 +62,12 @@ public class Usuari implements Serializable {
 
         //int longitud=regis.jTextFieldNombre.getText().trim().length(), l2;
         usuari.setNom(Registrarse.jTextFieldNombre.getText());
-        usuari.setCognoms(regis.jTextFieldApellidos.getText());
-        usuari.setDni(regis.jTextFieldDni.getText());
+        usuari.setCognoms(Registrarse.jTextFieldApellidos.getText());
+        usuari.setDni(Registrarse.jTextFieldDni.getText());
         try { //Aquest try intenta avisar a l'usuari que tant els campsn Codi Postal com
             //el del telefon han de ser només nombres.
-            usuari.setCodiPostal(Integer.parseInt(regis.jTextFieldCP.getText())); //Transformen el String en int
-            usuari.setTelefon(Integer.parseInt(regis.jTextFieldTelefono.getText())); //Transformen el String en int
+            usuari.setCodiPostal(Integer.parseInt(Registrarse.jTextFieldCP.getText())); //Transformen el String en int
+            usuari.setTelefon(Integer.parseInt(Registrarse.jTextFieldTelefono.getText())); //Transformen el String en int
             usuari.setCiutat(regis.jTextFieldCiudad.getText());
             usuari.setDireccio(regis.jTextFieldDireccion.getText());
             usuari.setUserName(Registrarse.jTextFieldUsername.getText());
@@ -90,7 +90,43 @@ public class Usuari implements Serializable {
      *
      */
     public void Editar() {
-
+        
+        int i;
+        
+        for(i = 0; i<Videoclub.usuarios.size(); i++){
+            Usuari usuario = new Usuari();
+            usuario = Videoclub.usuarios.get(i);
+            // Comparem les dades del usuari per a poder trobar les seves en l'ArrayList
+            if (Videoclub.user.getUserName().equals(usuario.getUserName()) && Videoclub.user.getPassword().equals(usuario.getPassword())) {
+                Usuario.ModificarNombre.getText();
+            }          
+        }
+                
+        
+    }
+    
+    /*
+     *   Aquest mètode permet mostrar les dades en pantalla de l'usuari per a poder editarles.
+     *
+     */
+    public void MostrarDadesUsuari() {
+        
+        int i;
+        
+        for(i = 0; i<Videoclub.usuarios.size(); i++){
+            Usuari usuario;
+            usuario = Videoclub.usuarios.get(i);
+            // Comparem les dades del usuari per a poder trobar les seves en l'ArrayList
+            if (Videoclub.user.getUserName().equals(usuario.getUserName()) && Videoclub.user.getPassword().equals(usuario.getPassword())) {
+                Usuario.ModificarNombre.setText(usuario.getNom());
+                Usuario.ModificarApellidos.setText(usuario.getCognoms());
+                Usuario.ModificarCP.setText(getCodiPostal() + "");
+                Usuario.ModificarDni.setText(usuario.getDni());
+                Usuario.ModificarTelefono.setText(usuario.getTelefon() + "");
+                Usuario.ModificarCiudad.setText(usuario.getCiutat());
+                Usuario.ModificarDireccion.setText(usuario.getCiutat());
+            }          
+        } 
     }
 
     /*
