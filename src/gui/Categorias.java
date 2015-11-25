@@ -18,6 +18,7 @@ public class Categorias extends javax.swing.JFrame {
      */
     public Categorias() {
         initComponents();
+        setLocationRelativeTo(null) ; 
     }
 
     /**
@@ -53,13 +54,28 @@ public class Categorias extends javax.swing.JFrame {
         jLabel3.setText("Películas");
 
         CategoriesSerie.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Humor", "Acción", "Aventura", "Fantasia", "Gore", "Intriga" }));
+        CategoriesSerie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CategoriesSerieActionPerformed(evt);
+            }
+        });
 
         CategoriesPelis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Acción", "Aventura", "Fantasia", "Drama", "Terror" }));
+        CategoriesPelis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CategoriesPelisActionPerformed(evt);
+            }
+        });
 
         BotoFiltrarSeries.setBackground(new java.awt.Color(0, 0, 102));
         BotoFiltrarSeries.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoFiltrarSeries.setForeground(new java.awt.Color(204, 204, 0));
         BotoFiltrarSeries.setText("Filtrar");
+        BotoFiltrarSeries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoFiltrarSeriesActionPerformed(evt);
+            }
+        });
 
         BotoFiltrarPelis.setBackground(new java.awt.Color(0, 0, 102));
         BotoFiltrarPelis.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -146,7 +162,36 @@ public class Categorias extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotoFiltrarPelisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoFiltrarPelisActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:   
+        if (CategoriesPelis.getSelectedItem().equals("Acción")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesPelis.getSelectedItem().equals("Aventura")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesPelis.getSelectedItem().equals("Fantasia")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesPelis.getSelectedItem().equals("Drama")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesPelis.getSelectedItem().equals("Terror")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
     }//GEN-LAST:event_BotoFiltrarPelisActionPerformed
 
     private void BotoTornarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarMenuActionPerformed
@@ -155,6 +200,53 @@ public class Categorias extends javax.swing.JFrame {
               frame.show();
               dispose();
     }//GEN-LAST:event_BotoTornarMenuActionPerformed
+
+    private void CategoriesSerieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriesSerieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CategoriesSerieActionPerformed
+
+    private void BotoFiltrarSeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoFiltrarSeriesActionPerformed
+        // TODO add your handling code here:
+        if (CategoriesSerie.getSelectedItem().equals("Humor")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+                        
+        if (CategoriesSerie.getSelectedItem().equals("Acción")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesSerie.getSelectedItem().equals("Aventura")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();   
+        }
+        
+        if (CategoriesSerie.getSelectedItem().equals("Fantasia")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesSerie.getSelectedItem().equals("Gore")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesSerie.getSelectedItem().equals("Intriga")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+    }//GEN-LAST:event_BotoFiltrarSeriesActionPerformed
+
+    private void CategoriesPelisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriesPelisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CategoriesPelisActionPerformed
 
     /**
      * @param args the command line arguments

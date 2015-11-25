@@ -5,6 +5,7 @@
  */
 package gui;
 
+import java.awt.event.KeyEvent;
 import videoclub.Videoclub;
 import videoclub.Usuari;
 import javax.swing.JOptionPane;
@@ -14,12 +15,14 @@ import javax.swing.JOptionPane;
  * @author sylver
  */
 public class Login extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        setLocationRelativeTo(null) ; 
     }
 
     /**
@@ -42,6 +45,11 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         BotoLogin.setBackground(new java.awt.Color(0, 0, 102));
         BotoLogin.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -172,6 +180,9 @@ public class Login extends javax.swing.JFrame {
               frame.show();
               dispose();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+    }//GEN-LAST:event_formKeyPressed
 
     /**
      * @param args the command line arguments
