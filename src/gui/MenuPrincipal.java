@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import videoclub.Usuari;
 
 /**
  *
@@ -169,9 +170,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void BotoPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoPerfilActionPerformed
         // TODO add your handling code here:
-              Usuario frame = new Usuario();  
-              frame.show();
-              dispose();
+        Usuari usuari = new Usuari();
+        usuari.MostrarDadesUsuari();
+        Usuario frame = new Usuario();  
+        frame.show();
+        dispose();
     }//GEN-LAST:event_BotoPerfilActionPerformed
 
     /**
