@@ -5,6 +5,7 @@
  */
 package videoclub;
 import gui.Login;
+import java.awt.Frame;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,7 +28,7 @@ public class Videoclub implements Serializable {
     private static final String rutaUsr = "BD/usuaris.bin";
     private static final String rutaPel = "BD/pelicules.bin";
     private static final String rutaSer = "BD/series.bin";
-    public Usuari usuari;
+    static public Usuari usuari;
     public Lloguer lloguer;
     public static final ArrayList<Usuari> usuarios = new ArrayList<>();
     public static final ArrayList<Pelicula> peliculas = new ArrayList<>();
@@ -211,6 +212,8 @@ public class Videoclub implements Serializable {
                 break;
             }//endtry
         }//endfor
+        
+        System.out.println("xivato2");
     }//end desarBD
 
     /*
@@ -261,13 +264,12 @@ public class Videoclub implements Serializable {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         // TODO code application logic here
         
-        //carregarBD(usuarios, peliculas, series);
+        carregarBD(usuarios, peliculas, series);
         
         Login login = new Login();
         
         login.setVisible(true);
-        
-        //desarBD(usuarios, peliculas, series);
+               
         
 //        Pelicula peli;
 //        Serie serie;
