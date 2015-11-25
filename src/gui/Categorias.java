@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package gui;
+import javax.swing.DefaultListModel;
 import videoclub.Videoclub;
 
 
@@ -214,6 +215,16 @@ public class Categorias extends javax.swing.JFrame {
     private void BotoFiltrarSeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoFiltrarSeriesActionPerformed
         // TODO add your handling code here:
         if (CategoriesSerie.getSelectedItem().equals("Humor")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = jList.getModel();
+            for(i=0;i<Videoclub.series.size();i++){
+                serie=Videoclub.series.get(i);
+                if("Humor".equals(serie.getCategoria())) {
+                    CategoriaFiltrada.lista.setToolTipText(serie.getNom()+"\n");
+                }
+            }
+            CategoriaFiltrada.titulo.setText("Humor");
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();

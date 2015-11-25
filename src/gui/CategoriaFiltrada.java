@@ -30,27 +30,28 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        BotoMostrar = new javax.swing.JButton();
+        botoMostrar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         BotoTornarMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextPane1.setEditable(false);
-        jTextPane1.setBackground(new java.awt.Color(51, 51, 55));
-        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        jTextPane1.setForeground(new java.awt.Color(204, 204, 0));
-        jScrollPane1.setViewportView(jTextPane1);
+        botoMostrar.setBackground(new java.awt.Color(0, 0, 102));
+        botoMostrar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botoMostrar.setForeground(new java.awt.Color(204, 204, 0));
+        botoMostrar.setText("Mostrar");
+        botoMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botoMostrarActionPerformed(evt);
+            }
+        });
 
-        BotoMostrar.setBackground(new java.awt.Color(0, 0, 102));
-        BotoMostrar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        BotoMostrar.setForeground(new java.awt.Color(204, 204, 0));
-        BotoMostrar.setText("Mostrar");
-
-        jScrollPane2.setViewportView(jList1);
+        lista.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                listaComponentShown(evt);
+            }
+        });
+        jScrollPane2.setViewportView(lista);
 
         BotoTornarMenu.setBackground(new java.awt.Color(204, 204, 0));
         BotoTornarMenu.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -67,31 +68,31 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(107, Short.MAX_VALUE)
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(172, 172, 172))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BotoMostrar)
-                        .addGap(187, 187, 187))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotoTornarMenu)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(84, 84, 84))))
+                        .addComponent(botoMostrar)
+                        .addGap(180, 180, 180))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
+                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotoMostrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(botoMostrar)
+                .addGap(30, 30, 30)
                 .addComponent(BotoTornarMenu)
                 .addContainerGap())
         );
@@ -105,6 +106,14 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
               frame.show();
               dispose();
     }//GEN-LAST:event_BotoTornarMenuActionPerformed
+
+    private void botoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoMostrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botoMostrarActionPerformed
+
+    private void listaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_listaComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listaComponentShown
 
     /**
      * @param args the command line arguments
@@ -142,13 +151,12 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotoMostrar;
     private javax.swing.JButton BotoTornarMenu;
+    private javax.swing.JButton botoMostrar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextPane jTextPane1;
+    public static final javax.swing.JList lista = new javax.swing.JList();
+    public static final javax.swing.JLabel titulo = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 }

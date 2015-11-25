@@ -5,16 +5,17 @@
         <group>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/Pelicula.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/Login.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/MenuPrincipal.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Videoclub.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Serie.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Registrarse.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Pelicula.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/CategoriaFiltrada.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Serie.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/MenuPrincipal.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Serie.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Registrarse.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/Listado.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/Categorias.java</file>
             <file>file:/home/pau/videoclub/Videoclub1/src/gui/Usuario.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Serie.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Usuari.java</file>
         </group>
     </open-files>
 </project-private>
