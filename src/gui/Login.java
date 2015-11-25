@@ -34,7 +34,6 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotoLogin = new javax.swing.JButton();
         jPasswordField = new javax.swing.JPasswordField();
         jUserField = new javax.swing.JTextField();
         BotoRegistrar = new javax.swing.JButton();
@@ -168,7 +167,7 @@ public class Login extends javax.swing.JFrame {
                 menu.setVisible(true);
                 j = 1;
                 // Això es per a saber quin usuari ha entrat dins.
-                Videoclub.user.setUserName(usuario.getPassword());
+                Videoclub.user.setUserName(usuario.getNom());
                 Videoclub.user.setPassword(usuario.getPassword());
             }          
         }
@@ -236,7 +235,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotoLogin;
+    public static final javax.swing.JButton BotoLogin = new javax.swing.JButton();
     private javax.swing.JButton BotoRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPasswordField jPasswordField;
