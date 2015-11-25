@@ -147,6 +147,11 @@ public class Usuario extends javax.swing.JFrame {
 
         ModificarCiudad.setBackground(new java.awt.Color(255, 255, 255));
         ModificarCiudad.setForeground(new java.awt.Color(0, 0, 0));
+        ModificarCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarCiudadActionPerformed(evt);
+            }
+        });
 
         jTextPane3.setEditable(false);
         jTextPane3.setBackground(new java.awt.Color(153, 153, 153));
@@ -206,12 +211,27 @@ public class Usuario extends javax.swing.JFrame {
 
         ModificarApellidos.setBackground(new java.awt.Color(255, 255, 255));
         ModificarApellidos.setForeground(new java.awt.Color(0, 0, 0));
+        ModificarApellidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarApellidosActionPerformed(evt);
+            }
+        });
 
         ModificarTelefono.setBackground(new java.awt.Color(255, 255, 255));
         ModificarTelefono.setForeground(new java.awt.Color(0, 0, 0));
+        ModificarTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarTelefonoActionPerformed(evt);
+            }
+        });
 
         ModificarDireccion.setBackground(new java.awt.Color(255, 255, 255));
         ModificarDireccion.setForeground(new java.awt.Color(0, 0, 0));
+        ModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarDireccionActionPerformed(evt);
+            }
+        });
 
         jTextPane14.setEditable(false);
         jTextPane14.setBackground(new java.awt.Color(153, 153, 153));
@@ -379,6 +399,22 @@ public class Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarCPActionPerformed
 
+    private void ModificarApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarApellidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarApellidosActionPerformed
+
+    private void ModificarTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarTelefonoActionPerformed
+
+    private void ModificarCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarCiudadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarCiudadActionPerformed
+
+    private void ModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarDireccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarDireccionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -418,12 +454,12 @@ public class Usuario extends javax.swing.JFrame {
     private javax.swing.JButton BotoModificarUser;
     private javax.swing.JButton BotoTornarMenu;
     public static final javax.swing.JTextField ModificarApellidos = new javax.swing.JTextField();
-    private static final javax.swing.JTextField ModificarCP = new javax.swing.JTextField();
-    private static final javax.swing.JTextField ModificarCiudad = new javax.swing.JTextField();
-    private static final javax.swing.JTextField ModificarDireccion = new javax.swing.JTextField();
-    private static final javax.swing.JTextField ModificarDni = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarCP = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarCiudad = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarDireccion = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarDni = new javax.swing.JTextField();
     public static final javax.swing.JTextField ModificarNombre = new javax.swing.JTextField();
-    private static final javax.swing.JTextField ModificarTelefono = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarTelefono = new javax.swing.JTextField();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
