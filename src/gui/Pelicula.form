@@ -31,9 +31,9 @@
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotoAlquilar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotoTornar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -53,10 +53,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="Durada" max="32767" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" pref="103" max="32767" attributes="0"/>
+                          <Component id="jLabelDurada" max="32767" attributes="0"/>
+                          <Component id="jLabelProductora" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabelAny" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabelCategoria" alignment="0" pref="103" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -72,22 +72,22 @@
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel2" max="32767" attributes="0"/>
-                  <Component id="jLabel8" max="32767" attributes="0"/>
+                  <Component id="jLabelCategoria" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel3" max="32767" attributes="0"/>
-                  <Component id="jLabel9" max="32767" attributes="0"/>
+                  <Component id="jLabelAny" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel4" max="32767" attributes="0"/>
-                  <Component id="jLabel10" max="32767" attributes="0"/>
+                  <Component id="jLabelProductora" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Durada" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="jLabelDurada" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -98,11 +98,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotoTornar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotoAlquilar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -157,7 +157,7 @@
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="BotoAlquilar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="0" type="rgb"/>
@@ -171,7 +171,7 @@
         <Property name="text" type="java.lang.String" value="Alquilar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="BotoTornar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="cc" red="cc" type="rgb"/>
@@ -185,7 +185,7 @@
         <Property name="text" type="java.lang.String" value="Volver"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotoTornarActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -195,25 +195,24 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="AreaText">
           <Properties>
-            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
           <Events>
-            <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jTextArea1InputMethodTextChanged"/>
+            <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="AreaTextInputMethodTextChanged"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="jLabelCategoria">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="jLabelAny">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="jLabelProductora">
     </Component>
-    <Component class="javax.swing.JLabel" name="Durada">
+    <Component class="javax.swing.JLabel" name="jLabelDurada">
     </Component>
   </SubComponents>
 </Form>

@@ -53,14 +53,14 @@ public class Categorias extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel3.setText("Películas");
 
-        CategoriesSerie.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Humor", "Acción", "Aventura", "Fantasia", "Gore", "Intriga" }));
+        CategoriesSerie.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Humor", "Acción", "Aventura", "Fantasia", "Gore", "Intriga", "Romántica" }));
         CategoriesSerie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CategoriesSerieActionPerformed(evt);
             }
         });
 
-        CategoriesPelis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Acción", "Aventura", "Fantasia", "Drama", "Terror" }));
+        CategoriesPelis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Acción", "Aventura", "Fantasia", "Drama", "Terror", "Romántica" }));
         CategoriesPelis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CategoriesPelisActionPerformed(evt);
@@ -192,6 +192,12 @@ public class Categorias extends javax.swing.JFrame {
             frame.show();
             dispose();
         }
+        
+        if (CategoriesPelis.getSelectedItem().equals("Romántica")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
     }//GEN-LAST:event_BotoFiltrarPelisActionPerformed
 
     private void BotoTornarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarMenuActionPerformed
@@ -238,6 +244,12 @@ public class Categorias extends javax.swing.JFrame {
         }
         
         if (CategoriesSerie.getSelectedItem().equals("Intriga")) {
+            CategoriaFiltrada frame = new CategoriaFiltrada();
+            frame.show();
+            dispose();
+        }
+        
+        if (CategoriesSerie.getSelectedItem().equals("Romántica")) {
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
