@@ -32,11 +32,6 @@ public class Registrarse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextFieldNombre = new javax.swing.JTextField();
-        jTextFieldApellidos = new javax.swing.JTextField();
-        jTextFieldDireccion = new javax.swing.JTextField();
-        jTextFieldDni = new javax.swing.JTextField();
-        jTextFieldCiudad = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -423,12 +418,12 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    public static javax.swing.JTextField jTextFieldApellidos;
+    public static final javax.swing.JTextField jTextFieldApellidos = new javax.swing.JTextField();
     public static final javax.swing.JTextField jTextFieldCP = new javax.swing.JTextField();
-    public javax.swing.JTextField jTextFieldCiudad;
-    public javax.swing.JTextField jTextFieldDireccion;
-    public static javax.swing.JTextField jTextFieldDni;
-    public static javax.swing.JTextField jTextFieldNombre;
+    public static final javax.swing.JTextField jTextFieldCiudad = new javax.swing.JTextField();
+    public static final javax.swing.JTextField jTextFieldDireccion = new javax.swing.JTextField();
+    public static final javax.swing.JTextField jTextFieldDni = new javax.swing.JTextField();
+    public static final javax.swing.JTextField jTextFieldNombre = new javax.swing.JTextField();
     public static final javax.swing.JTextField jTextFieldTelefono = new javax.swing.JTextField();
     public static final javax.swing.JTextField jTextFieldUsername = new javax.swing.JTextField();
     private javax.swing.JTextPane jTextPane1;

@@ -158,7 +158,6 @@ public class Login extends javax.swing.JFrame {
     private void BotoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoLoginActionPerformed
         // TODO add your handling code here:
         //char password[]=txtPass.getPassword();
-        String contraseña = new String();
         Usuari usuario;
         int i, j=0;
         for (i = 0; i < Videoclub.usuarios.size(); i++) {
@@ -168,6 +167,9 @@ public class Login extends javax.swing.JFrame {
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.setVisible(true);
                 j = 1;
+                // Això es per a saber quin usuari ha entrat dins.
+                Videoclub.user.setUserName(usuario.getPassword());
+                Videoclub.user.setPassword(usuario.getPassword());
             }          
         }
         if(j!=1)

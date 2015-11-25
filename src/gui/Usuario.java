@@ -51,7 +51,6 @@ public class Usuario extends javax.swing.JFrame {
         jTextFieldDni = new javax.swing.JTextField();
         jTextFieldCP = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        ModificarCiudad = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -62,16 +61,10 @@ public class Usuario extends javax.swing.JFrame {
         jTextPane11 = new javax.swing.JTextPane();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTextPane12 = new javax.swing.JTextPane();
-        ModificarNombre = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
         jTextPane13 = new javax.swing.JTextPane();
-        ModificarApellidos = new javax.swing.JTextField();
-        ModificarTelefono = new javax.swing.JTextField();
-        ModificarDireccion = new javax.swing.JTextField();
         jScrollPane14 = new javax.swing.JScrollPane();
         jTextPane14 = new javax.swing.JTextPane();
-        ModificarDni = new javax.swing.JTextField();
-        ModificarCP = new javax.swing.JTextField();
         BotoModificarUser = new javax.swing.JButton();
         BotoTornarMenu = new javax.swing.JButton();
 
@@ -238,6 +231,11 @@ public class Usuario extends javax.swing.JFrame {
 
         ModificarCP.setBackground(new java.awt.Color(255, 255, 255));
         ModificarCP.setForeground(new java.awt.Color(0, 0, 0));
+        ModificarCP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarCPActionPerformed(evt);
+            }
+        });
 
         BotoModificarUser.setBackground(new java.awt.Color(0, 0, 102));
         BotoModificarUser.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -258,16 +256,9 @@ public class Usuario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(ModificarApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(137, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ModificarDni, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotoModificarUser)
                         .addGap(255, 255, 255))
@@ -276,7 +267,14 @@ public class Usuario extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(123, 123, 123))))
+                        .addGap(123, 123, 123))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ModificarDni, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(ModificarApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -320,9 +318,9 @@ public class Usuario extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(57, 57, 57)
                 .addComponent(ModificarDni, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
+                .addGap(20, 20, 20)
                 .addComponent(ModificarApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
                 .addComponent(BotoModificarUser)
                 .addGap(49, 49, 49)
                 .addComponent(BotoTornarMenu)
@@ -377,6 +375,10 @@ public class Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarDniActionPerformed
 
+    private void ModificarCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarCPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarCPActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -415,13 +417,13 @@ public class Usuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotoModificarUser;
     private javax.swing.JButton BotoTornarMenu;
-    private javax.swing.JTextField ModificarApellidos;
-    private javax.swing.JTextField ModificarCP;
-    private javax.swing.JTextField ModificarCiudad;
-    private javax.swing.JTextField ModificarDireccion;
-    private javax.swing.JTextField ModificarDni;
-    private javax.swing.JTextField ModificarNombre;
-    private javax.swing.JTextField ModificarTelefono;
+    public static final javax.swing.JTextField ModificarApellidos = new javax.swing.JTextField();
+    private static final javax.swing.JTextField ModificarCP = new javax.swing.JTextField();
+    private static final javax.swing.JTextField ModificarCiudad = new javax.swing.JTextField();
+    private static final javax.swing.JTextField ModificarDireccion = new javax.swing.JTextField();
+    private static final javax.swing.JTextField ModificarDni = new javax.swing.JTextField();
+    public static final javax.swing.JTextField ModificarNombre = new javax.swing.JTextField();
+    private static final javax.swing.JTextField ModificarTelefono = new javax.swing.JTextField();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;

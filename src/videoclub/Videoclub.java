@@ -33,6 +33,7 @@ public class Videoclub implements Serializable {
     public static final ArrayList<Usuari> usuarios = new ArrayList<>();
     public static final ArrayList<Pelicula> peliculas = new ArrayList<>();
     public static final ArrayList<Serie> series = new ArrayList<>();
+    public static final Usuari user = new Usuari();
 
 
     /*
