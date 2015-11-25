@@ -31,7 +31,7 @@ public class Pelicula extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        TitulPeli = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -46,11 +46,12 @@ public class Pelicula extends javax.swing.JFrame {
         jLabelAny = new javax.swing.JLabel();
         jLabelProductora = new javax.swing.JLabel();
         jLabelDurada = new javax.swing.JLabel();
+        BotoDisponible = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
+        TitulPeli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TitulPeli.setForeground(new java.awt.Color(204, 204, 0));
 
         jLabel2.setText("Categoría:");
         jLabel2.setFocusable(false);
@@ -74,6 +75,11 @@ public class Pelicula extends javax.swing.JFrame {
         BotoAlquilar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoAlquilar.setForeground(new java.awt.Color(204, 204, 0));
         BotoAlquilar.setText("Alquilar");
+        BotoAlquilar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoAlquilarActionPerformed(evt);
+            }
+        });
 
         BotoTornar.setBackground(new java.awt.Color(204, 204, 0));
         BotoTornar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -96,6 +102,8 @@ public class Pelicula extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(AreaText);
 
+        BotoDisponible.setEnabled(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +112,7 @@ public class Pelicula extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TitulPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotoAlquilar)
@@ -116,7 +124,10 @@ public class Pelicula extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel7)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BotoDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
@@ -135,7 +146,7 @@ public class Pelicula extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TitulPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,9 +166,11 @@ public class Pelicula extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                .addGap(14, 14, 14)
-                .addComponent(jLabel7)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(BotoDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
@@ -182,6 +195,10 @@ public class Pelicula extends javax.swing.JFrame {
               frame.show();
               dispose();
     }//GEN-LAST:event_BotoTornarActionPerformed
+
+    private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotoAlquilarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,8 +239,9 @@ public class Pelicula extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea AreaText;
     private javax.swing.JButton BotoAlquilar;
+    private javax.swing.JToggleButton BotoDisponible;
     private javax.swing.JButton BotoTornar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel TitulPeli;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
