@@ -5,7 +5,13 @@
  */
 package gui;
 
+<<<<<<< HEAD
 import java.awt.event.KeyEvent;
+=======
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
 import videoclub.Videoclub;
 import videoclub.Usuari;
 import javax.swing.JOptionPane;
@@ -45,9 +51,18 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
+=======
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+>>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
             }
         });
 
@@ -157,17 +172,18 @@ public class Login extends javax.swing.JFrame {
         //char password[]=txtPass.getPassword();
         String contraseña = new String();
         Usuari usuario;
-        int i;
+        int i, j=0;
         for (i = 0; i < Videoclub.usuarios.size(); i++) {
             usuario = Videoclub.usuarios.get(i);
             if (jUserField.getText().equals(usuario.getUserName()) && jPasswordField.getText().equals(usuario.getPassword())) {
                 this.dispose();
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Error:\n" + "Combinación de usuario y contraseña incorrecta.", "Error 001", WIDTH, null);
-            }
+                j = 1;
+            }          
         }
+        if(j!=1)
+            JOptionPane.showMessageDialog(null, "Error:\n" + "Combinación de usuario y contraseña incorrecta.", "Error 001", WIDTH, null);
     }//GEN-LAST:event_BotoLoginActionPerformed
 
     private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
@@ -181,8 +197,23 @@ public class Login extends javax.swing.JFrame {
               dispose();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
 
+<<<<<<< HEAD
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
     }//GEN-LAST:event_formKeyPressed
+=======
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
+>>>>>>> d6eebe25c87e98659df8debb0ed08115bb2c9dce
 
     /**
      * @param args the command line arguments

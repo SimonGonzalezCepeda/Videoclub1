@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package gui;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import videoclub.Videoclub;
 
 
@@ -32,10 +35,8 @@ public class Registrarse extends javax.swing.JFrame {
 
         jTextFieldNombre = new javax.swing.JTextField();
         jTextFieldApellidos = new javax.swing.JTextField();
-        jTextFieldTelefono = new javax.swing.JTextField();
         jTextFieldDireccion = new javax.swing.JTextField();
         jTextFieldDni = new javax.swing.JTextField();
-        jTextFieldCP = new javax.swing.JTextField();
         jTextFieldCiudad = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -51,12 +52,10 @@ public class Registrarse extends javax.swing.JFrame {
         jTextPane7 = new javax.swing.JTextPane();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextPane8 = new javax.swing.JTextPane();
-        jTextFieldUsername = new javax.swing.JTextField();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextPane9 = new javax.swing.JTextPane();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextPane10 = new javax.swing.JTextPane();
-        jPasswordField = new javax.swing.JPasswordField();
         BotoRegistrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -66,15 +65,30 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jTextFieldNombre.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNombre.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreActionPerformed(evt);
+            }
+        });
 
         jTextFieldApellidos.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldApellidos.setForeground(new java.awt.Color(0, 0, 0));
 
         jTextFieldTelefono.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldTelefono.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTelefonoActionPerformed(evt);
+            }
+        });
 
         jTextFieldDireccion.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldDireccion.setForeground(new java.awt.Color(0, 0, 0));
@@ -87,6 +101,11 @@ public class Registrarse extends javax.swing.JFrame {
 
         jTextFieldCiudad.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldCiudad.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCiudadActionPerformed(evt);
+            }
+        });
 
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
@@ -197,8 +216,9 @@ public class Registrarse extends javax.swing.JFrame {
                                         .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -269,9 +289,13 @@ public class Registrarse extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane2)
                             .addComponent(jTextFieldApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -322,7 +346,30 @@ public class Registrarse extends javax.swing.JFrame {
 
     private void BotoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoRegistrarActionPerformed
         // TODO add your handling code here:
+        
+        videoclub.Usuari.Registrar();
     }//GEN-LAST:event_BotoRegistrarActionPerformed
+
+    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreActionPerformed
+
+    private void jTextFieldTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTelefonoActionPerformed
+
+    private void jTextFieldCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCiudadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCiudadActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Registrarse.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -364,7 +411,7 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField;
+    public static final javax.swing.JPasswordField jPasswordField = new javax.swing.JPasswordField();
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
@@ -377,14 +424,14 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextFieldApellidos;
-    private javax.swing.JTextField jTextFieldCP;
-    private javax.swing.JTextField jTextFieldCiudad;
-    private javax.swing.JTextField jTextFieldDireccion;
-    private javax.swing.JTextField jTextFieldDni;
-    private javax.swing.JTextField jTextFieldNombre;
-    private javax.swing.JTextField jTextFieldTelefono;
-    private javax.swing.JTextField jTextFieldUsername;
+    public static javax.swing.JTextField jTextFieldApellidos;
+    public static final javax.swing.JTextField jTextFieldCP = new javax.swing.JTextField();
+    public javax.swing.JTextField jTextFieldCiudad;
+    public javax.swing.JTextField jTextFieldDireccion;
+    public static javax.swing.JTextField jTextFieldDni;
+    public static javax.swing.JTextField jTextFieldNombre;
+    public static final javax.swing.JTextField jTextFieldTelefono = new javax.swing.JTextField();
+    public static final javax.swing.JTextField jTextFieldUsername = new javax.swing.JTextField();
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane10;
     private javax.swing.JTextPane jTextPane2;
