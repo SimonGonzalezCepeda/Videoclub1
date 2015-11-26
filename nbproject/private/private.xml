@@ -3,31 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/gui/Serie.java</file>
-            <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/gui/Categorias.java</file>
-            <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/gui/CategoriaFiltrada.java</file>
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/videoclub/Historic.java</file>
-            <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/videoclub/Lloguer.java</file>
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/videoclub/Videoclub.java</file>
-=======
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Pelicula.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Lloguer.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Login.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Videoclub.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Pelicula.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/CategoriaFiltrada.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Serie.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Historic.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/MenuPrincipal.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Temporada.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Serie.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Registrarse.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Listado.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Categorias.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Usuario.java</file>
-            <file>file:/home/pau/videoclub/Videoclub1/src/videoclub/Usuari.java</file>
->>>>>>> 3672275c995dd9d7b59cf13d674a8e161a93b297
         </group>
     </open-files>
 </project-private>
