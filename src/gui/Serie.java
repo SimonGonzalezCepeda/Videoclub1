@@ -6,9 +6,13 @@
 package gui;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import videoclub.Temporada;
 import videoclub.Videoclub;
 
 /**
@@ -83,6 +87,11 @@ public class Serie extends javax.swing.JFrame {
         BotoAlquilar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoAlquilar.setForeground(new java.awt.Color(204, 204, 0));
         BotoAlquilar.setText("Alquilar");
+        BotoAlquilar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoAlquilarActionPerformed(evt);
+            }
+        });
 
         BotoTornar.setBackground(new java.awt.Color(204, 204, 0));
         BotoTornar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -192,7 +201,6 @@ public class Serie extends javax.swing.JFrame {
                             .addComponent(jLabelEmision, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel7)
                             .addGroup(layout.createSequentialGroup()
@@ -253,6 +261,30 @@ public class Serie extends javax.swing.JFrame {
             Logger.getLogger(Serie.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_formWindowClosing
+
+    private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
+        // TODO add your handling code here:
+        videoclub.Serie serie;
+        ArrayList<Temporada> temps;
+        String nom = new String();
+        videoclub.Temporada temp;
+        ComboBoxModel model = jComboBoxTemporadas.getModel();
+        int i, j;
+        for(i = 0; i < Videoclub.series.size(); i++){
+            serie = Videoclub.series.get(i);
+            if (serie.getNom().equals(jLabelTitulo.getText())){
+                for(j = 0; j < model.getSize(); j++){
+                    nom = model.getElementAt(i).toString().trim();
+                    temps = serie.getTemporadas();
+                    temp = temps.get(j);
+                    if(nom.equals("Temporada " + temp.getNumeroTemporada())){
+                         temp.setDisponible(false);
+                    }
+                }
+            }
+        }
+        
+    }//GEN-LAST:event_BotoAlquilarActionPerformed
 
     /**
      * @param args the command line arguments
