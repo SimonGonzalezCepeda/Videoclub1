@@ -132,7 +132,7 @@ public class Usuari implements Serializable {
                 Usuario.ModificarCiudad.setText(usuario.getCiutat());
                 Usuario.ModificarDireccion.setText(usuario.getDireccio());
             }
-        } 
+        }
     }
 
     /*
