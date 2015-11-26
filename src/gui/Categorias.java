@@ -5,6 +5,7 @@
  */
 package gui;
 import javax.swing.DefaultListModel;
+import javax.swing.ListModel;
 import videoclub.Videoclub;
 
 
@@ -217,11 +218,15 @@ public class Categorias extends javax.swing.JFrame {
         if (CategoriesSerie.getSelectedItem().equals("Humor")) {
             int i;
             videoclub.Serie serie;
-            DefaultListModel listModel = jList.getModel();
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
             for(i=0;i<Videoclub.series.size();i++){
                 serie=Videoclub.series.get(i);
+                System.out.println("xivato2");
                 if("Humor".equals(serie.getCategoria())) {
-                    CategoriaFiltrada.lista.setToolTipText(serie.getNom()+"\n");
+                    listModel.addElement(serie.getNom()+"\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada.titulo.setText("Humor");
