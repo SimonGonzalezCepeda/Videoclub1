@@ -143,17 +143,19 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
                 }
                 Serie.jLabelProductora.setText(serie.getProductora());
                 Serie.AreaTextSerie.setText(serie.getSinopsis());
-                if (serie.isDisponible()) {
-                    Serie.BotoDisponible.setText("Si");
-                } else {
-                    Serie.BotoDisponible.setText("No");
-                }
+                
                 temps = serie.getTemporadas();
                 DefaultComboBoxModel model = new DefaultComboBoxModel();
                 for (int k = 0; k < temps.size(); k++) {
                     temp = temps.get(k);
                     model.addElement("Temporada " + temp.getNumeroTemporada());
                     Serie.jComboBoxTemporadas.setModel(model);
+                }
+                temp = temps.get(0);
+                if (temp.isDisponible()) {
+                    Serie.BotoDisponible.setText("Si");
+                } else {
+                    Serie.BotoDisponible.setText("No");
                 }
                 s = true;
 
