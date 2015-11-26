@@ -5,16 +5,13 @@
  */
 package gui;
 
-import static gui.Serie.jComboBoxTemporadas;
-import static gui.Serie.jLabelTitulo;
+import static java.awt.image.ImageObserver.WIDTH;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
-import videoclub.Temporada;
 import videoclub.Videoclub;
 
 /**
@@ -228,9 +225,18 @@ public class Pelicula extends javax.swing.JFrame {
         for (i = 0; i < Videoclub.peliculas.size(); i++) {
             peli = Videoclub.peliculas.get(i);
             if (peli.getNom().equals(jLabelTitulo.getText())) {
-                peli.setDisponible(false);
+
+                if (peli.isDisponible()) {
+                    peli.setDisponible(false);
+                    Pelicula.BotoDisponible.setText("No");
+                    JOptionPane.showMessageDialog(null, "Bien!\n" + "Pelicula alquilada correctamente", "OK!", WIDTH, null);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Ups!\n" + "Parece que ya se ha alquilado esta pelicula", "Ups!", WIDTH, null);
+                }
             }
+
         }
+
     }//GEN-LAST:event_BotoAlquilarActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
