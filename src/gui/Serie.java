@@ -37,24 +37,16 @@ public class Serie extends javax.swing.JFrame {
 
         TitulSerie = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        AreaTextSerie = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
-        BotoDisponible = new javax.swing.JToggleButton();
         jLabel5 = new javax.swing.JLabel();
         BotoAlquilar = new javax.swing.JButton();
         BotoTornar = new javax.swing.JButton();
-        jComboBoxTemporadas = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabelAny1 = new javax.swing.JLabel();
-        jLabelCategoria = new javax.swing.JLabel();
-        jLabelAño = new javax.swing.JLabel();
-        jLabelProductora = new javax.swing.JLabel();
-        jLabelEmision = new javax.swing.JLabel();
-        jLabelSinopsis = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -286,12 +278,12 @@ public class Serie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea AreaTextSerie;
+    public static final javax.swing.JTextArea AreaTextSerie = new javax.swing.JTextArea();
     private javax.swing.JButton BotoAlquilar;
-    private javax.swing.JToggleButton BotoDisponible;
+    public static final javax.swing.JToggleButton BotoDisponible = new javax.swing.JToggleButton();
     private javax.swing.JButton BotoTornar;
     private javax.swing.JLabel TitulSerie;
-    private javax.swing.JComboBox jComboBoxTemporadas;
+    public static final javax.swing.JComboBox jComboBoxTemporadas = new javax.swing.JComboBox();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -300,11 +292,11 @@ public class Serie extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelAny1;
-    private javax.swing.JLabel jLabelAño;
-    private javax.swing.JLabel jLabelCategoria;
-    private javax.swing.JLabel jLabelEmision;
-    private javax.swing.JLabel jLabelProductora;
-    private javax.swing.JLabel jLabelSinopsis;
+    public static final javax.swing.JLabel jLabelAño = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelCategoria = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelEmision = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelProductora = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelSinopsis = new javax.swing.JLabel();
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
