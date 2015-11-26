@@ -176,7 +176,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Acción".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -195,7 +194,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Aventuras".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -214,7 +212,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Fantasia".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -233,7 +230,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Drama".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -252,7 +248,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Terror".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -271,7 +266,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Romántica".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -304,7 +298,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Humor".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -323,7 +316,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Acción".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -342,7 +334,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Aventuras".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -361,7 +352,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Fantasia".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -380,7 +370,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Gore".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
@@ -399,7 +388,6 @@ public class Categorias extends javax.swing.JFrame {
                 if ("Intriga".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
-                    System.out.println("xivato3");
                 }
             }
             CategoriaFiltrada frame = new CategoriaFiltrada();
