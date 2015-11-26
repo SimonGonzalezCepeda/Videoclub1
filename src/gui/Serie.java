@@ -104,6 +104,29 @@ public class Serie extends javax.swing.JFrame {
             }
         });
 
+        jComboBoxTemporadas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBoxTemporadasMouseClicked(evt);
+            }
+        });
+        jComboBoxTemporadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTemporadasActionPerformed(evt);
+            }
+        });
+        jComboBoxTemporadas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jComboBoxTemporadasFocusLost(evt);
+            }
+        });
+        jComboBoxTemporadas.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+                jComboBoxTemporadasCaretPositionChanged(evt);
+            }
+        });
+
         jLabel1.setText("Temporadas");
 
         jLabel2.setText("En emisión:");
@@ -292,6 +315,47 @@ public class Serie extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_BotoAlquilarActionPerformed
+
+    private void jComboBoxTemporadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTemporadasActionPerformed
+        // TODO add your handling code here:
+        ComboBoxModel model = jComboBoxTemporadas.getModel();
+        videoclub.Temporada temp;
+        ArrayList<Temporada> temps;
+        videoclub.Serie serie;
+        String text1;
+        int i, j;
+        for(i = 0; i < Videoclub.series.size(); i++){
+            serie = Videoclub.series.get(i);
+            if (serie.getNom().equals(jLabelTitulo.getText())){
+                for (j = 0; j < model.getSize(); j++){
+                    text1 = model.getElementAt(i).toString().trim();
+                    temps = serie.getTemporadas();
+                    temp = temps.get(j);
+                    if(text1.equals("Temporada " + temp.getNumeroTemporada())){
+                        System.out.println("1");
+                        if (temp.isDisponible()) 
+                            Serie.BotoDisponible.setText("Si");
+                        if (!temp.isDisponible())
+                            Serie.BotoDisponible.setText("No");
+                        
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_jComboBoxTemporadasActionPerformed
+
+    private void jComboBoxTemporadasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComboBoxTemporadasFocusLost
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jComboBoxTemporadasFocusLost
+
+    private void jComboBoxTemporadasCaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jComboBoxTemporadasCaretPositionChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTemporadasCaretPositionChanged
+
+    private void jComboBoxTemporadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxTemporadasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTemporadasMouseClicked
 
     /**
      * @param args the command line arguments
