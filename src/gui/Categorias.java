@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package gui;
+
 import javax.swing.DefaultListModel;
 import javax.swing.ListModel;
 import videoclub.Videoclub;
-
 
 /**
  *
@@ -20,7 +20,7 @@ public class Categorias extends javax.swing.JFrame {
      */
     public Categorias() {
         initComponents();
-        setLocationRelativeTo(null) ; 
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -55,14 +55,14 @@ public class Categorias extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel3.setText("Películas");
 
-        CategoriesSerie.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Humor", "Acción", "Aventura", "Fantasia", "Gore", "Intriga", "Romántica" }));
+        CategoriesSerie.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Humor", "Acción", "Aventuras", "Fantasia", "Gore", "Intriga" }));
         CategoriesSerie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CategoriesSerieActionPerformed(evt);
             }
         });
 
-        CategoriesPelis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Acción", "Aventura", "Fantasia", "Drama", "Terror", "Romántica" }));
+        CategoriesPelis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Acción", "Aventuras", "Fantasia", "Drama", "Terror", "Romántica" }));
         CategoriesPelis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CategoriesPelisActionPerformed(evt);
@@ -166,36 +166,114 @@ public class Categorias extends javax.swing.JFrame {
     private void BotoFiltrarPelisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoFiltrarPelisActionPerformed
         // TODO add your handling code here:   
         if (CategoriesPelis.getSelectedItem().equals("Acción")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Acción".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
-        if (CategoriesPelis.getSelectedItem().equals("Aventura")) {
+
+        if (CategoriesPelis.getSelectedItem().equals("Aventuras")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Aventuras".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesPelis.getSelectedItem().equals("Fantasia")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Fantasia".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesPelis.getSelectedItem().equals("Drama")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Drama".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesPelis.getSelectedItem().equals("Terror")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Terror".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesPelis.getSelectedItem().equals("Romántica")) {
+            int i;
+            videoclub.Pelicula pelis;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                pelis = Videoclub.peliculas.get(i);
+                System.out.println("xivato2");
+                if ("Romántica".equals(pelis.getCategoria())) {
+                    listModel.addElement(pelis.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
@@ -204,9 +282,9 @@ public class Categorias extends javax.swing.JFrame {
 
     private void BotoTornarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarMenuActionPerformed
         // TODO add your handling code here:
-              MenuPrincipal frame = new MenuPrincipal();  
-              frame.show();
-              dispose();
+        MenuPrincipal frame = new MenuPrincipal();
+        frame.show();
+        dispose();
     }//GEN-LAST:event_BotoTornarMenuActionPerformed
 
     private void CategoriesSerieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriesSerieActionPerformed
@@ -220,52 +298,110 @@ public class Categorias extends javax.swing.JFrame {
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
             System.out.println("xivato");
-            for(i=0;i<Videoclub.series.size();i++){
-                serie=Videoclub.series.get(i);
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
                 System.out.println("xivato2");
-                if("Humor".equals(serie.getCategoria())) {
-                    listModel.addElement(serie.getNom()+"\n");
+                if ("Humor".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
                     System.out.println("xivato3");
                 }
             }
-            CategoriaFiltrada.titulo.setText("Humor");
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-                        
+
         if (CategoriesSerie.getSelectedItem().equals("Acción")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
+                System.out.println("xivato2");
+                if ("Acción".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
-        if (CategoriesSerie.getSelectedItem().equals("Aventura")) {
+
+        if (CategoriesSerie.getSelectedItem().equals("Aventuras")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
+                System.out.println("xivato2");
+                if ("Aventuras".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
-            dispose();   
+            dispose();
         }
-        
+
         if (CategoriesSerie.getSelectedItem().equals("Fantasia")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
+                System.out.println("xivato2");
+                if ("Fantasia".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesSerie.getSelectedItem().equals("Gore")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
+                System.out.println("xivato2");
+                if ("Gore".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
         }
-        
+
         if (CategoriesSerie.getSelectedItem().equals("Intriga")) {
-            CategoriaFiltrada frame = new CategoriaFiltrada();
-            frame.show();
-            dispose();
-        }
-        
-        if (CategoriesSerie.getSelectedItem().equals("Romántica")) {
+            int i;
+            videoclub.Serie serie;
+            DefaultListModel listModel = new DefaultListModel();
+            System.out.println("xivato");
+            for (i = 0; i < Videoclub.series.size(); i++) {
+                serie = Videoclub.series.get(i);
+                System.out.println("xivato2");
+                if ("Intriga".equals(serie.getCategoria())) {
+                    listModel.addElement(serie.getNom() + "\n");
+                    CategoriaFiltrada.lista.setModel(listModel);
+                    System.out.println("xivato3");
+                }
+            }
             CategoriaFiltrada frame = new CategoriaFiltrada();
             frame.show();
             dispose();
