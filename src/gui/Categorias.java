@@ -5,6 +5,9 @@
  */
 package gui;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.ListModel;
 import videoclub.Videoclub;
@@ -44,6 +47,11 @@ public class Categorias extends javax.swing.JFrame {
         BotoTornarMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 0));
@@ -399,6 +407,15 @@ public class Categorias extends javax.swing.JFrame {
     private void CategoriesPelisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoriesPelisActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CategoriesPelisActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Categorias.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
