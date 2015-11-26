@@ -166,11 +166,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
         // TODO add your handling code here:
                int i;
-               int a;
                videoclub.Pelicula pelis;
                videoclub.Serie serie;
                DefaultListModel listModel = new DefaultListModel();
-               DefaultListModel listModel2 = new DefaultListModel();
                for (i = 0; i < Videoclub.series.size(); i++) {
                    serie = Videoclub.series.get(i);
                    listModel.addElement(serie.getNom() + "\n");

@@ -8,6 +8,7 @@ package gui;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JTextArea;
 import videoclub.Videoclub;
 
@@ -193,6 +194,20 @@ public class Pelicula extends javax.swing.JFrame {
 
     private void BotoTornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarActionPerformed
         // TODO add your handling code here:
+              int i;
+               videoclub.Pelicula pelis;
+               videoclub.Serie serie;
+               DefaultListModel listModel = new DefaultListModel();
+               for (i = 0; i < Videoclub.series.size(); i++) {
+                   serie = Videoclub.series.get(i);
+                   listModel.addElement(serie.getNom() + "\n");
+                   Listado.lista2.setModel(listModel);
+               }
+               for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                   pelis = Videoclub.peliculas.get(i);
+                   listModel.addElement(pelis.getNom() + "\n");
+                   Listado.lista2.setModel(listModel);
+               }
               Listado frame = new Listado();  
               frame.show();
               dispose();
