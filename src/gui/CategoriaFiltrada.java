@@ -8,6 +8,7 @@ package gui;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ListModel;
 import videoclub.Videoclub;
 
 /**
@@ -21,9 +22,9 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
      */
     public CategoriaFiltrada() {
         initComponents();
-        setLocationRelativeTo(null) ; 
+        setLocationRelativeTo(null);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -108,13 +109,62 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
 
     private void BotoTornarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarMenuActionPerformed
         // TODO add your handling code here:
-              MenuPrincipal frame = new MenuPrincipal();  
-              frame.show();
-              dispose();
+        MenuPrincipal frame = new MenuPrincipal();
+        frame.show();
+        dispose();
     }//GEN-LAST:event_BotoTornarMenuActionPerformed
 
     private void botoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoMostrarActionPerformed
         // TODO add your handling code here:
+        int i, j;
+        videoclub.Serie serie;
+        videoclub.Pelicula pelicula;
+        String nom;
+        String nom1;
+        boolean p = false, s = false;
+        /*for(i = 0; i < Videoclub.series.size(); i++){
+         serie = Videoclub.series.get(i);
+         if (lista.getToolTipText().equals(serie.getNom())){
+         Serie.jLabelAño.setText(serie.getAny() + "");
+         Serie.jLabelCategoria.setText(serie.getCategoria());
+         Serie frame = new Serie();
+         frame.show();
+         dispose();
+         }
+         }*/
+
+        for (i = 0; i < Videoclub.peliculas.size(); i++) {
+            pelicula = Videoclub.peliculas.get(i);
+            ListModel list = lista.getModel();
+            for (j = 0; j < list.getSize(); j++) {
+                nom1 = list.getElementAt(j).toString().trim();
+                nom = pelicula.getNom().trim();
+                System.out.println(nom1);
+                System.out.println(nom);
+                if ( nom.equals(nom1)) {
+                    //Pelicula.jLabelTitul.setText(pelicula.getNom());
+                    Pelicula.jLabelAny.setText(pelicula.getAny() + "");
+                    Pelicula.jLabelCategoria.setText(pelicula.getCategoria());
+                    Pelicula.jLabelDurada.setText(pelicula.getDuracio() + "");
+                    Pelicula.jLabelProductora.setText(pelicula.getProductora());
+                    Pelicula.AreaText.setText(pelicula.getSinopsis());
+                    if(pelicula.isDisponible()){
+                        Pelicula.BotoDisponible.setText("Si");
+                    }else{
+                        Pelicula.BotoDisponible.setText("No");
+                    }
+                    p= true;
+                }
+            }
+        }
+        
+        if(p){
+            Pelicula frame = new Pelicula();
+            frame.show();
+            this.dispose();
+                    
+        }
+
     }//GEN-LAST:event_botoMostrarActionPerformed
 
     private void listaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_listaComponentShown
