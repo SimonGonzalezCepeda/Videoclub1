@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package gui;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import videoclub.Videoclub;
 
 
@@ -139,6 +142,11 @@ public class Usuario extends javax.swing.JFrame {
         jTextFieldCP.setForeground(new java.awt.Color(0, 0, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
@@ -261,6 +269,11 @@ public class Usuario extends javax.swing.JFrame {
         BotoModificarUser.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoModificarUser.setForeground(new java.awt.Color(204, 204, 0));
         BotoModificarUser.setText("Modificar");
+        BotoModificarUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoModificarUserActionPerformed(evt);
+            }
+        });
 
         BotoTornarMenu.setBackground(new java.awt.Color(204, 204, 0));
         BotoTornarMenu.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -414,6 +427,22 @@ public class Usuario extends javax.swing.JFrame {
     private void ModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarDireccionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarDireccionActionPerformed
+
+    private void BotoModificarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoModificarUserActionPerformed
+        // TODO add your handling code here:
+        videoclub.Usuari usuari = new videoclub.Usuari();
+        
+        usuari.Editar();
+    }//GEN-LAST:event_BotoModificarUserActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

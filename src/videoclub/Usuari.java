@@ -98,7 +98,13 @@ public class Usuari implements Serializable {
             usuario = Videoclub.usuarios.get(i);
             // Comparem les dades del usuari per a poder trobar les seves en l'ArrayList
             if (Videoclub.user.getUserName().equals(usuario.getUserName()) && Videoclub.user.getPassword().equals(usuario.getPassword())) {
-                Usuario.ModificarNombre.getText();
+                usuario.setNom(Usuario.ModificarNombre.getText());
+                usuario.setCognoms(Usuario.ModificarApellidos.getText());
+                usuario.setCodiPostal(Integer.parseInt(Usuario.ModificarCP.getText()));
+                usuario.setDni(Usuario.ModificarDni.getText());
+                usuario.setTelefon(Integer.parseInt(Usuario.ModificarTelefono.getText()));
+                usuario.setCiutat(Usuario.ModificarCiudad.getText());
+                usuario.setDireccio(Usuario.ModificarDireccion.getText());
             }          
         }
                 
@@ -124,8 +130,8 @@ public class Usuari implements Serializable {
                 Usuario.ModificarDni.setText(usuario.getDni());
                 Usuario.ModificarTelefono.setText(usuario.getTelefon() + "");
                 Usuario.ModificarCiudad.setText(usuario.getCiutat());
-                Usuario.ModificarDireccion.setText(usuario.getCiutat());
-            }          
+                Usuario.ModificarDireccion.setText(usuario.getDireccio());
+            }
         } 
     }
 
