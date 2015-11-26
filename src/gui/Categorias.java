@@ -177,10 +177,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Acción".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -195,10 +193,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Aventuras".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -213,10 +209,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Fantasia".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -231,10 +225,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Drama".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -249,10 +241,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Terror".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -267,10 +257,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Pelicula pelis;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.peliculas.size(); i++) {
                 pelis = Videoclub.peliculas.get(i);
-                System.out.println("xivato2");
                 if ("Romántica".equals(pelis.getCategoria())) {
                     listModel.addElement(pelis.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -299,10 +287,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Humor".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -317,10 +303,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Acción".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -335,10 +319,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Aventuras".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -353,10 +335,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Fantasia".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -371,10 +351,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Gore".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
@@ -389,10 +367,8 @@ public class Categorias extends javax.swing.JFrame {
             int i;
             videoclub.Serie serie;
             DefaultListModel listModel = new DefaultListModel();
-            System.out.println("xivato");
             for (i = 0; i < Videoclub.series.size(); i++) {
                 serie = Videoclub.series.get(i);
-                System.out.println("xivato2");
                 if ("Intriga".equals(serie.getCategoria())) {
                     listModel.addElement(serie.getNom() + "\n");
                     CategoriaFiltrada.lista.setModel(listModel);
