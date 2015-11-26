@@ -3,9 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/gui/Serie.java</file>
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/videoclub/Historic.java</file>
             <file>file:/home/sylver/Code/Java/Programacio/Videoclub1/src/videoclub/Videoclub.java</file>
+=======
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Pelicula.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Login.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/MenuPrincipal.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Registrarse.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Categorias.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Usuario.java</file>
+            <file>file:/home/pau/videoclub/Videoclub1/src/gui/Serie.java</file>
+>>>>>>> a60ec8e3d3b6e350f6b86ce3f80b107ffea1ec34
         </group>
     </open-files>
 </project-private>
