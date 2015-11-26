@@ -161,9 +161,14 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
         if(p){
             Pelicula frame = new Pelicula();
             frame.show();
-            this.dispose();
-                    
+            this.dispose();       
         }
+        if(s){
+            Serie frame = new Serie();
+            frame.show();
+            this.dispose();
+        }
+        
 
     }//GEN-LAST:event_botoMostrarActionPerformed
 
