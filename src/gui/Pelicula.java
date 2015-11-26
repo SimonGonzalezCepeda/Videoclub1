@@ -25,6 +25,7 @@ public class Pelicula extends javax.swing.JFrame {
         initComponents();
         AreaText.setLineWrap(true);
         AreaText.setWrapStyleWord(true); 
+        setLocationRelativeTo(null); 
     }
 
     /**

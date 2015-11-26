@@ -24,7 +24,7 @@ public class Serie extends javax.swing.JFrame {
         initComponents();
         AreaTextSerie.setLineWrap(true);
         AreaTextSerie.setWrapStyleWord(true); 
-        setLocationRelativeTo(null) ; 
+        setLocationRelativeTo(null); 
     }
 
     /**
