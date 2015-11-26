@@ -5,11 +5,16 @@
  */
 package gui;
 
+import static gui.Serie.jComboBoxTemporadas;
+import static gui.Serie.jLabelTitulo;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JTextArea;
+import videoclub.Temporada;
 import videoclub.Videoclub;
 
 /**
@@ -24,8 +29,8 @@ public class Pelicula extends javax.swing.JFrame {
     public Pelicula() {
         initComponents();
         AreaText.setLineWrap(true);
-        AreaText.setWrapStyleWord(true); 
-        setLocationRelativeTo(null); 
+        AreaText.setWrapStyleWord(true);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -191,32 +196,41 @@ public class Pelicula extends javax.swing.JFrame {
 
     private void AreaTextInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_AreaTextInputMethodTextChanged
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_AreaTextInputMethodTextChanged
 
     private void BotoTornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoTornarActionPerformed
         // TODO add your handling code here:
-              int i;
-               videoclub.Pelicula pelis;
-               videoclub.Serie serie;
-               DefaultListModel listModel = new DefaultListModel();
-               for (i = 0; i < Videoclub.series.size(); i++) {
-                   serie = Videoclub.series.get(i);
-                   listModel.addElement(serie.getNom() + "\n");
-                   Listado.lista2.setModel(listModel);
-               }
-               for (i = 0; i < Videoclub.peliculas.size(); i++) {
-                   pelis = Videoclub.peliculas.get(i);
-                   listModel.addElement(pelis.getNom() + "\n");
-                   Listado.lista2.setModel(listModel);
-               }
-              Listado frame = new Listado();  
-              frame.show();
-              dispose();
+        int i;
+        videoclub.Pelicula pelis;
+        videoclub.Serie serie;
+        DefaultListModel listModel = new DefaultListModel();
+        for (i = 0; i < Videoclub.series.size(); i++) {
+            serie = Videoclub.series.get(i);
+            listModel.addElement(serie.getNom() + "\n");
+            Listado.lista2.setModel(listModel);
+        }
+        for (i = 0; i < Videoclub.peliculas.size(); i++) {
+            pelis = Videoclub.peliculas.get(i);
+            listModel.addElement(pelis.getNom() + "\n");
+            Listado.lista2.setModel(listModel);
+        }
+        Listado frame = new Listado();
+        frame.show();
+        dispose();
     }//GEN-LAST:event_BotoTornarActionPerformed
 
     private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
         // TODO add your handling code here:
+        videoclub.Pelicula peli;
+        String nom = new String();
+        int i, j;
+        for (i = 0; i < Videoclub.peliculas.size(); i++) {
+            peli = Videoclub.peliculas.get(i);
+            if (peli.getNom().equals(jLabelTitulo.getText())) {
+                peli.setDisponible(false);
+            }
+        }
     }//GEN-LAST:event_BotoAlquilarActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -255,7 +269,6 @@ public class Pelicula extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
