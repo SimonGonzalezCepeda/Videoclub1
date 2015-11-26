@@ -6,9 +6,12 @@
 package gui;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ListModel;
+import videoclub.Temporada;
 import videoclub.Videoclub;
 
 /**
@@ -119,19 +122,43 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
         int i, j;
         videoclub.Serie serie;
         videoclub.Pelicula pelicula;
+        ArrayList<Temporada> temps;
+        videoclub.Temporada temp;
         String nom;
         String nom1;
         boolean p = false, s = false;
-        /*for(i = 0; i < Videoclub.series.size(); i++){
-         serie = Videoclub.series.get(i);
-         if (lista.getToolTipText().equals(serie.getNom())){
-         Serie.jLabelAño.setText(serie.getAny() + "");
-         Serie.jLabelCategoria.setText(serie.getCategoria());
-         Serie frame = new Serie();
-         frame.show();
-         dispose();
-         }
-         }*/
+        for (i = 0; i < Videoclub.series.size(); i++) {
+            serie = Videoclub.series.get(i);
+            ListModel list = lista.getModel();
+            for (j = 0; j < list.getSize(); j++) {
+                nom1 = list.getElementAt(j).toString().trim();
+                nom = serie.getNom().trim();
+                if (nom.equals(nom1)) {
+                    Serie.jLabelAño.setText(serie.getAny() + "");
+                    Serie.jLabelCategoria.setText(serie.getCategoria());
+                    if(serie.isEmissio()){
+                        Serie.jLabelEmision.setText("Temporada " + serie.getTotalTemporades());
+                    } else {
+                        Serie.jLabelEmision.setText("No");
+                    }
+                    Serie.jLabelProductora.setText(serie.getProductora());
+                    Serie.AreaTextSerie.setText(serie.getSinopsis());
+                    if(serie.isDisponible()){
+                        Serie.BotoDisponible.setText("Si");
+                    } else {
+                        Serie.BotoDisponible.setText("No");
+                    }
+                    temps = serie.getTemporadas();
+                    DefaultComboBoxModel model = new DefaultComboBoxModel();
+                    for(int k = 0; k < temps.size(); k++){
+                        temp = temps.get(k);
+                        model.addElement("Temporada " + temp.getNumeroTemporada());
+                        Serie.jComboBoxTemporadas.setModel(model);
+                    }
+                    s= true;
+                }
+            }
+        }
 
         for (i = 0; i < Videoclub.peliculas.size(); i++) {
             pelicula = Videoclub.peliculas.get(i);
@@ -139,36 +166,34 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
             for (j = 0; j < list.getSize(); j++) {
                 nom1 = list.getElementAt(j).toString().trim();
                 nom = pelicula.getNom().trim();
-                System.out.println(nom1);
-                System.out.println(nom);
-                if ( nom.equals(nom1)) {
+                if (nom.equals(nom1)) {
                     //Pelicula.jLabelTitul.setText(pelicula.getNom());
                     Pelicula.jLabelAny.setText(pelicula.getAny() + "");
                     Pelicula.jLabelCategoria.setText(pelicula.getCategoria());
                     Pelicula.jLabelDurada.setText(pelicula.getDuracio() + "");
                     Pelicula.jLabelProductora.setText(pelicula.getProductora());
                     Pelicula.AreaText.setText(pelicula.getSinopsis());
-                    if(pelicula.isDisponible()){
+                    if (pelicula.isDisponible()) {
                         Pelicula.BotoDisponible.setText("Si");
-                    }else{
+                    } else {
                         Pelicula.BotoDisponible.setText("No");
                     }
-                    p= true;
+                    p = true;
                 }
             }
         }
-        
-        if(p){
+
+        if (p) {
             Pelicula frame = new Pelicula();
             frame.show();
-            this.dispose();       
+            this.dispose();
         }
-        if(s){
+        if (s) {
             Serie frame = new Serie();
             frame.show();
             this.dispose();
         }
-        
+
 
     }//GEN-LAST:event_botoMostrarActionPerformed
 
