@@ -119,7 +119,7 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
 
     private void botoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoMostrarActionPerformed
         // TODO add your handling code here:
-        int i, j;
+        int i, j = 0;
         videoclub.Serie serie;
         videoclub.Pelicula pelicula;
         ArrayList<Temporada> temps;
@@ -130,57 +130,56 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
         for (i = 0; i < Videoclub.series.size(); i++) {
             serie = Videoclub.series.get(i);
             ListModel list = lista.getModel();
-            for (j = 0; j < list.getSize(); j++) {
-                nom1 = list.getElementAt(j).toString().trim();
-                nom = serie.getNom().trim();
-                if (nom.equals(nom1)) {
-                    Serie.jLabelAño.setText(serie.getAny() + "");
-                    Serie.jLabelCategoria.setText(serie.getCategoria());
-                    if(serie.isEmissio()){
-                        Serie.jLabelEmision.setText("Temporada " + serie.getTotalTemporades());
-                    } else {
-                        Serie.jLabelEmision.setText("No");
-                    }
-                    Serie.jLabelProductora.setText(serie.getProductora());
-                    Serie.AreaTextSerie.setText(serie.getSinopsis());
-                    if(serie.isDisponible()){
-                        Serie.BotoDisponible.setText("Si");
-                    } else {
-                        Serie.BotoDisponible.setText("No");
-                    }
-                    temps = serie.getTemporadas();
-                    DefaultComboBoxModel model = new DefaultComboBoxModel();
-                    for(int k = 0; k < temps.size(); k++){
-                        temp = temps.get(k);
-                        model.addElement("Temporada " + temp.getNumeroTemporada());
-                        Serie.jComboBoxTemporadas.setModel(model);
-                    }
-                    s= true;
+            nom1 = list.getElementAt(lista.getSelectedIndex()).toString().trim();
+            nom = serie.getNom().trim();
+            if (nom.equals(nom1)) {
+                Serie.jLabelTitulo.setText(serie.getNom());
+                Serie.jLabelAño.setText(serie.getAny() + "");
+                Serie.jLabelCategoria.setText(serie.getCategoria());
+                if (serie.isEmissio()) {
+                    Serie.jLabelEmision.setText("Temporada " + serie.getTotalTemporades());
+                } else {
+                    Serie.jLabelEmision.setText("No");
                 }
+                Serie.jLabelProductora.setText(serie.getProductora());
+                Serie.AreaTextSerie.setText(serie.getSinopsis());
+                if (serie.isDisponible()) {
+                    Serie.BotoDisponible.setText("Si");
+                } else {
+                    Serie.BotoDisponible.setText("No");
+                }
+                temps = serie.getTemporadas();
+                DefaultComboBoxModel model = new DefaultComboBoxModel();
+                for (int k = 0; k < temps.size(); k++) {
+                    temp = temps.get(k);
+                    model.addElement("Temporada " + temp.getNumeroTemporada());
+                    Serie.jComboBoxTemporadas.setModel(model);
+                }
+                s = true;
+
             }
         }
 
         for (i = 0; i < Videoclub.peliculas.size(); i++) {
             pelicula = Videoclub.peliculas.get(i);
             ListModel list = lista.getModel();
-            for (j = 0; j < list.getSize(); j++) {
-                nom1 = list.getElementAt(j).toString().trim();
-                nom = pelicula.getNom().trim();
-                if (nom.equals(nom1)) {
-                    //Pelicula.jLabelTitul.setText(pelicula.getNom());
-                    Pelicula.jLabelAny.setText(pelicula.getAny() + "");
-                    Pelicula.jLabelCategoria.setText(pelicula.getCategoria());
-                    Pelicula.jLabelDurada.setText(pelicula.getDuracio() + "");
-                    Pelicula.jLabelProductora.setText(pelicula.getProductora());
-                    Pelicula.AreaText.setText(pelicula.getSinopsis());
-                    if (pelicula.isDisponible()) {
-                        Pelicula.BotoDisponible.setText("Si");
-                    } else {
-                        Pelicula.BotoDisponible.setText("No");
-                    }
-                    p = true;
+            nom1 = list.getElementAt(lista.getSelectedIndex()).toString().trim();;
+            nom = pelicula.getNom().trim();
+            if (nom.equals(nom1)) {
+                Pelicula.jLabelTitulo.setText(pelicula.getNom());
+                Pelicula.jLabelAny.setText(pelicula.getAny() + "");
+                Pelicula.jLabelCategoria.setText(pelicula.getCategoria());
+                Pelicula.jLabelDurada.setText(pelicula.getDuracio() + "");
+                Pelicula.jLabelProductora.setText(pelicula.getProductora());
+                Pelicula.AreaText.setText(pelicula.getSinopsis());
+                if (pelicula.isDisponible()) {
+                    Pelicula.BotoDisponible.setText("Si");
+                } else {
+                    Pelicula.BotoDisponible.setText("No");
                 }
+                p = true;
             }
+
         }
 
         if (p) {
