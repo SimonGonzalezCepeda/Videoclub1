@@ -35,7 +35,6 @@ public class Listado extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         BotoTornarMenu = new javax.swing.JButton();
         BotoAccedirPeli = new javax.swing.JButton();
 
@@ -50,7 +49,7 @@ public class Listado extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 204, 0));
         jLabel1.setText("Listado");
 
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(lista2);
 
         BotoTornarMenu.setBackground(new java.awt.Color(204, 204, 0));
         BotoTornarMenu.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -66,17 +65,18 @@ public class Listado extends javax.swing.JFrame {
         BotoAccedirPeli.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         BotoAccedirPeli.setForeground(new java.awt.Color(204, 204, 0));
         BotoAccedirPeli.setText("Mostrar");
+        BotoAccedirPeli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoAccedirPeliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 112, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(187, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -86,6 +86,10 @@ public class Listado extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotoAccedirPeli)
                         .addGap(210, 210, 210))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +101,7 @@ public class Listado extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(BotoTornarMenu)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotoAccedirPeli)
@@ -122,6 +126,10 @@ public class Listado extends javax.swing.JFrame {
             Logger.getLogger(Listado.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_formWindowClosing
+
+    private void BotoAccedirPeliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAccedirPeliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotoAccedirPeliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,7 +170,7 @@ public class Listado extends javax.swing.JFrame {
     private javax.swing.JButton BotoAccedirPeli;
     private javax.swing.JButton BotoTornarMenu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    public static final javax.swing.JList lista2 = new javax.swing.JList();
     // End of variables declaration//GEN-END:variables
 }

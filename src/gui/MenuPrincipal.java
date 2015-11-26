@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import videoclub.Usuari;
 
 /**
@@ -164,6 +165,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
         // TODO add your handling code here:
+               int i;
+               int a;
+               videoclub.Pelicula pelis;
+               videoclub.Serie serie;
+               DefaultListModel listModel = new DefaultListModel();
+               DefaultListModel listModel2 = new DefaultListModel();
+               for (i = 0; i < Videoclub.series.size(); i++) {
+                   serie = Videoclub.series.get(i);
+                   listModel.addElement(serie.getNom() + "\n");
+                   Listado.lista2.setModel(listModel);
+               }
+               for (i = 0; i < Videoclub.peliculas.size(); i++) {
+                   pelis = Videoclub.peliculas.get(i);
+                   listModel.addElement(pelis.getNom() + "\n");
+                   Listado.lista2.setModel(listModel);
+               }
               Listado frame = new Listado();  
               frame.show();
               dispose();
