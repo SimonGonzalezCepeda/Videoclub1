@@ -214,7 +214,7 @@ public class Videoclub implements Serializable {
             }//endtry
         }//endfor
         
-        System.out.println("xivato2");
+        System.out.println("Todos los datos se han guardado correctamente");
     }//end desarBD
 
     /*
