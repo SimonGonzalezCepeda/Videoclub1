@@ -35,7 +35,6 @@ public class Pelicula extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TitulPeli = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -45,12 +44,6 @@ public class Pelicula extends javax.swing.JFrame {
         BotoAlquilar = new javax.swing.JButton();
         BotoTornar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        AreaText = new javax.swing.JTextArea();
-        jLabelCategoria = new javax.swing.JLabel();
-        jLabelAny = new javax.swing.JLabel();
-        jLabelProductora = new javax.swing.JLabel();
-        jLabelDurada = new javax.swing.JLabel();
-        BotoDisponible = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -255,21 +248,21 @@ public class Pelicula extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea AreaText;
+    public static final javax.swing.JTextArea AreaText = new javax.swing.JTextArea();
     private javax.swing.JButton BotoAlquilar;
-    private javax.swing.JToggleButton BotoDisponible;
+    public static final javax.swing.JToggleButton BotoDisponible = new javax.swing.JToggleButton();
     private javax.swing.JButton BotoTornar;
-    private javax.swing.JLabel TitulPeli;
+    public static final javax.swing.JLabel TitulPeli = new javax.swing.JLabel();
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabelAny;
-    private javax.swing.JLabel jLabelCategoria;
-    private javax.swing.JLabel jLabelDurada;
-    private javax.swing.JLabel jLabelProductora;
+    public static final javax.swing.JLabel jLabelAny = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelCategoria = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelDurada = new javax.swing.JLabel();
+    public static final javax.swing.JLabel jLabelProductora = new javax.swing.JLabel();
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
