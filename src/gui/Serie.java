@@ -5,6 +5,7 @@
  */
 package gui;
 
+import static java.awt.image.ImageObserver.WIDTH;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -12,6 +13,7 @@ import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import videoclub.Temporada;
 import videoclub.Videoclub;
 
@@ -277,7 +279,13 @@ public class Serie extends javax.swing.JFrame {
                     temps = serie.getTemporadas();
                     temp = temps.get(j);
                     if(nom.equals("Temporada " + temp.getNumeroTemporada())){
-                         temp.setDisponible(false);
+                        if (temp.isDisponible()) {
+                            temp.setDisponible(false);
+                            Serie.BotoDisponible.setText("No");
+                            JOptionPane.showMessageDialog(null, "Bien!\n" + "Serie alquilada correctamente", "OK!", WIDTH, null);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Ups!\n" + "Parece que ya se ha alquilado esta serie", "Ups!", WIDTH, null);
+                        }
                     }
                 }
             }
