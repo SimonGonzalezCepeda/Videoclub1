@@ -36,7 +36,6 @@ public class Serie extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelTitulo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -313,7 +312,7 @@ public class Serie extends javax.swing.JFrame {
     public static final javax.swing.JLabel jLabelCategoria = new javax.swing.JLabel();
     public static final javax.swing.JLabel jLabelEmision = new javax.swing.JLabel();
     public static final javax.swing.JLabel jLabelProductora = new javax.swing.JLabel();
-    private javax.swing.JLabel jLabelTitulo;
+    public static final javax.swing.JLabel jLabelTitulo = new javax.swing.JLabel();
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
