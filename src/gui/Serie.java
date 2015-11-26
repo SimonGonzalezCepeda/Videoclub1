@@ -61,7 +61,6 @@ public class Serie extends javax.swing.JFrame {
         });
 
         jLabelTitulo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(204, 204, 0));
 
         AreaTextSerie.setEditable(false);
         AreaTextSerie.setColumns(20);
