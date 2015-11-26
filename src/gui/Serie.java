@@ -57,7 +57,6 @@ public class Serie extends javax.swing.JFrame {
         });
 
         jLabelTitulo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(204, 204, 0));
 
         AreaTextSerie.setEditable(false);
         AreaTextSerie.setColumns(20);
@@ -192,7 +191,6 @@ public class Serie extends javax.swing.JFrame {
                             .addComponent(jLabelEmision, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel7)
                             .addGroup(layout.createSequentialGroup()
