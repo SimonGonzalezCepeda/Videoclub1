@@ -5,6 +5,11 @@
  */
 package gui;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import videoclub.Videoclub;
+
 /**
  *
  * @author pau
@@ -35,6 +40,11 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
         BotoTornarMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         botoMostrar.setBackground(new java.awt.Color(0, 0, 102));
         botoMostrar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -110,6 +120,15 @@ public class CategoriaFiltrada extends javax.swing.JFrame {
     private void listaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_listaComponentShown
         // TODO add your handling code here:
     }//GEN-LAST:event_listaComponentShown
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(CategoriaFiltrada.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
