@@ -5,7 +5,11 @@
  */
 package gui;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextArea;
+import videoclub.Videoclub;
 
 /**
  *
@@ -49,6 +53,11 @@ public class Pelicula extends javax.swing.JFrame {
         BotoDisponible = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         TitulPeli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TitulPeli.setForeground(new java.awt.Color(204, 204, 0));
@@ -199,6 +208,15 @@ public class Pelicula extends javax.swing.JFrame {
     private void BotoAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoAlquilarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BotoAlquilarActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            // TODO add your handling code here:
+            Videoclub.desarBD(Videoclub.usuarios, Videoclub.peliculas, Videoclub.series);
+        } catch (IOException ex) {
+            Logger.getLogger(Pelicula.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
